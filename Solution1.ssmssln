@@ -1,19 +1,265 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# SQL Server Management Studio Solution File, Format Version 19.00
-VisualStudioVersion = 15.0.28307.421
-MinimumVisualStudioVersion = 10.0.40219.1
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Default|Default = Default|Default
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90DFA205-06DA-48D3-8478-A43827956256}.Default|Default.ActiveCfg = Default
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C21C49FA-629A-487D-821D-65A1A18B285C}
-	EndGlobalSection
-EndGlobal
+/*Create database*/
+
+Create database sqlproject1;
+
+/*Use database*/
+
+Use database sqlproject1;
+
+/*Table1-Employeetable1*/
+
+/*Create table1-Employeetable1*/
+
+Create table Employeetable1
+(Sno int identity(1,1),
+Employeeid varchar(255) primary key,
+Lastname varchar(255) not null,
+Firstname varchar(255) not null,
+Age integer not null,
+Doorno varchar(255) not null,
+HouseAddress varchar(255) not null,
+City varchar(255) not null,
+District varchar(255) not null,
+State varchar (255) not null,
+Pincode int not null,
+Designation varchar(255) not null,
+Salary varchar(255) not null,
+Department varchar (255) not null,
+Bonus varchar(255) not null);
+
+/*Select table1- Employeetable1*/
+
+
+Select* from Employeetable1;
+
+
+/*insert values Employeetable1*/
+
+insert into Employeetable1 values('A101','Arivu','Azhagan',30, 11,'East street','Chennai', 'Chennai','Tamilnadu', 600015, 'Software Engineer', 
+50000, 'IT', 1000000);
+
+insert into Employeetable1 values('A102','Balamurugan','Senthil', 29, 32,'Amman kovil street','Theni', 'Coimbatore','Tamilnadu', 631027, 'Software Engineer', 
+45000, 'IT', 9000000);
+
+insert into Employeetable1 values('A103','Charles','Charli', 35, 22, '3rd cross street','Salem', 'Salem', 'Tamilnadu', 635025, 'Developer', 
+100000, 'IT', 1500000);
+
+insert into Employeetable1 values('A104','David','Christ', 26, 25/2,'Annasalai','Madurai', 'Madurai', 'Tamilnadu', 625001, 'Software Engineer', 
+50000, 'IT', 1400000);
+
+insert into Employeetable1 values('A105','Eniyan','Raja',25, 2/586,'Mangalam street','Theni', 'Theni', 'Tamilnadu', 625531, 'Senior Engineer', 
+100000, 'IT', 1700000);
+
+insert into Employeetable1 values('A106','Frank','Vinoth', 27, 4/2, 'West street','Erode', 'Erode', 'Tamilnadu', 645225, 'Software Engineer', 
+90000, 'IT', 2000000);
+
+insert into Employeetable1 values('A107','Gokul','Krishna', 25, 9/3, 'Ganapathy Streer','Coimbatore', 'Coimbatore', 'Tamilnadu', 641001, 'Juniot Engineer', 
+50000, 'IT', 500000);
+
+insert into Employeetable1 values('A108','Hemanth','Kumar', 26, 4/1,'North Street','Trichy', 'Trichy', 'Tamilnadu', 620001, 'Software Engineer', 
+70000, 'IT', 1000000);
+
+insert into Employeetable1 values('A109','Indra','Kumar', 25, 9/2, 'Bharathi Nagar','Namakkal', 'Namakkal', 'Tamilnadu', 637001, 'Software Engineer', 
+65000, 'IT', 900000);
+
+insert into Employeetable1 values('A110','Jayakumar','Durai', 27, 48/9, 'T.Nagar','Chennai', 'Chennai', 'Tamilnadu', 600007, 'Senior Software Engineer', 
+90000, 'IT', 2000000);
+
+
+
+
+
+/*Table2-patient*/
+
+/*Create Table2-patient*/
+
+Create table patient
+(SNo int identity(1,1),
+Patientid varchar(255) primary key,
+Firstname varchar(255) not null,
+Lastname varchar(255) not null,
+Doorno varchar(255) not null,
+HouseAddress varchar(255) not null,
+City varchar(255) not null,
+District varchar(255) not null,
+Pincode int not null,
+Roomno varchar(255) not null,
+Ward varchar(255) not null,
+Department varchar(255) not null)
+
+/*select table2-patient*/
+
+Select* from patient;
+
+/*insert values table2-patient*/
+
+insert into patient values('54A124','Rithik','Jayakumar', 12,'North Street','Chennai', 'Chennai', 60025,'15', 'O2', 'Ortho');
+
+insert into patient  values('25Q125','Senthil','Udaya', 325,'Anjenayer Kovil Street','Tirunelveli', 'Tirunelveli', 656525, '20', 'E5', 'Cardio');
+
+insert into patient values('36P105','Preetha','Nareen', 135,'3rd Cross Street','Salem', 'Salem', 635025, '5', 'G4', 'Gyno');
+
+insert into patient values('253P154','Srinivasan','Raj', 25/2,'Thirunagar,5th Street','namakkal', 'namakkal',636025, '6 ', 'D5', 'Diabetics');
+
+insert into patient values('256W446','Sreeja','Karthik', 2/586,'Mangalam Street','Madurai', 'Madurai', 632125, '13', 'G4', 'Gyno');
+
+insert into patient values('523R254','Ram','Eshwaran', 25, 'West car Street', 'Erode', 'Erode',645225, '8', 'O6', 'Ortho');
+
+insert into patient values('253S854','helana','Nivin', 36, 'Fairlands ','Salem', 'Salem', 636125, '5', 'P4', 'Pediatrics');
+
+insert into patient values('865S524','Nila','Sudhaharan', 24/8,'Thenmalai Street','Dindugal', 'Dindugal',652125, '6', 'G7', 'Gyno');
+
+insert into patient values('789S258','Senthuran','Sivakumar', 75/9,'Kumaran Street','Palani', 'palani',60025, '9', 'E8', 'Cardio');
+
+insert into patient values('456M568', 'Mayon', 'Suriya', 29/8,'West Mambalam','Chennai', 'Chennai',600028,'5','N6', 'Neuro') ;
+
+
+
+/*Table3-student */
+
+/*Create student table*/
+
+Create table student
+(SNo int identity(1,1),
+Studentid varchar(255) primary key,
+Lastname varchar(255) not null,
+Firstname varchar(255) not null,
+Class varchar(255) not null,
+Section varchar(255) not null,
+Groupcode varchar(255) not null,
+Hostelname varchar(255) not null,
+Blocks varchar(255) not null,
+Roomno varchar(255) not null)
+
+
+/*Select table3-student*/
+
+Select* from student;
+
+/*insert values table3-student*/
+
+
+insert into student values('100','Kowshik','Raja','XI','A','125', 'LOTUS','A','20');
+
+insert into student values('101','Sudhan','Manohar', 'XI','A','125', 'BHARATHI','A','20');
+
+insert into student values('102','Prem','Viswa','XI','A','125', 'JASMIN','A','22');
+
+insert into student values('103','Mani','Raj','XI','B','126', 'SUNFLOWER','B','21');
+
+insert into student values('104','Siva','Guru','XI','C','127', 'BHARATHI','B','2');
+
+insert into student values('105','Chitra','Ravi','XI','B','126', 'MULLAI', 'B','2');
+
+insert into student values('106','Meera','Nivin','XI','D','128', 'MULLAI','C','15');
+
+insert into student values('107','Nila','Balu','XI','D','128', 'ROSE','C','20');
+
+insert into student values('108','Advaith','Rudran','XI','c','127', 'BHARATHI','C','22' );
+
+insert into student values('109', 'Mayon', 'Suriya','XI','A','125', 'BHARATHI','D','20');
+
+
+
+
+
+/*Table4-Teacher table*/
+
+/*Create Table4-Teacher*/
+
+Create table teacher
+(SNo int identity(1,1),
+Teacherid varchar(255) primary key,
+Lastname varchar(255)not null,
+Firstname varchar(255) not null,
+Class varchar(255) not null,
+Studentidno varchar(255) not null,
+Subjects varchar(255) not null
+foreign key(Studentidno) references student(Studentid));
+
+
+/*select table4-teacher*/
+
+
+
+select* from teacher;
+
+
+/*insert table4-teacher*/
+
+insert into teacher values('200','Rathinam','Indran','XI','100','Tamil');
+
+insert into teacher values('201','Sudhan','Manohar', 'XI','101','English');
+
+insert into teacher values('202','Prem','Viswa','XI','102','Maths');
+
+insert into teacher values('203','Mani','Raj','XI','103','Physics');
+
+insert into teacher values('204','Siva','Guru','XI','104','Chemistry');
+
+insert into teacher values('205','Chitra','Ravi','XI','105','Botony');
+
+insert into teacher values('206','Meera','Nivin','XI','106','Zoology');
+
+insert into teacher values('207','Nila','Balu','XII','107','Hindi');
+
+insert into teacher values('208','Advaith','Rudran','XII','108','Maths' );
+
+insert into teacher values('209', 'Mayon', 'Suriya','XII','109', 'Physics');
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*Update Table1*/
+
+/*Update the values*/
+
+update Employeetable1 set pincode= 636001 where Sno=3;
+
+/*Delete the values*/
+
+delete from Employeetable1 where Employeeid='A110';
+
+select * from Employeetable1;
+
+
+/*Alter Table3-student*/
+
+/*Alter the values*/
+
+alter table student add Mothername varchar(255);
+
+/*update the table column NULL values*/
+
+update student set Mothername='Jaya' where Sno=3;
+
+
+/*Minimum age in Table1-Employeetable1*/
+
+select min (age) from Employeetable1;
+
+/*Maximum age in Table1-Employeetable1*/
+
+select max (age) from Employeetable1;
+
+
+/*Count in table2-patient*/
+
+select count (*) from patient;
+
+/*Between in Table1-Employeetable1*/
+
+
+select * from Employeetable1 where salary between 50000 and 90000;
+
+
+/*IN in table1-Employeetable1*/
+
+select *from Employeetable1 where bonus in (900000);
+
+
+/*Top 5 Records in table4-teacher*/
+
+
+select top 5*from teacher;
+
